@@ -1,0 +1,50 @@
+name: Bug Report
+description: Report a bug with a source, sensor or the integration in general
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this Bug Report!
+  - type: dropdown
+    id: error
+    attributes:
+      label: "I Have A Problem With:"
+      options:
+        - A specific source
+        - Sensor configuration
+        - The integration in general
+      multiple: true
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What's Your Problem
+      description: Describe your problem as detailed as possible
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source (if relevant)
+      description: Which source are you using?
+      placeholder: ex. broxtowe_gov_uk
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Please provide relevant logs from Home Assistant if no relevant logs are available please write "no relevant logs" (please remove sensitive information or use example addresses)
+      render: Shell
+    validations:
+      required: false
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Relevant Configuration
+      description: Please provide your configuration (source/sensor) if relevant (please remove sensitive information or use example addresses)
+      render: YAML
+    validations:
+      required: false
