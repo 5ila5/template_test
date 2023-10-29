@@ -48,3 +48,33 @@ body:
       render: YAML
     validations:
       required: false
+  - type: checkboxes
+    id: checklist-source
+    attributes:
+      label: Checklist Source Error
+      description: Have you tried the following?
+      options:
+        - label: Use the example parameters for your source (often available in the documentation) (don't forget to restart Home Assistant after changing the configuration)
+          required: false
+        - label: Checked that the website of your service provider is still working
+          required: false
+        - label: Tested my attributes on the service provider website (if possible)
+          required: false
+  - type: checkboxes
+    id: checklist-sensor
+    attributes:
+      label: Checklist Sensor Error
+      description: Have you tried the following?
+      options:
+        - label: Checked in the Home Assistant Calendar tab if the event names match the types names (if types argument is used) 
+          required: false
+  - type: checkboxes
+    id: checklist-general
+    attributes:
+      label: Required
+      description: "Please make sure you agree with these statements:"
+      options:
+        - label: I have searched past (closed AND opened) issues to see if this bug has already been reported, and it hasn't been.
+          required: true
+        - label: I understand that people give their precious time for free, and thus I've done my very best to make this problem as easy as possible to investigate.
+          required: true
