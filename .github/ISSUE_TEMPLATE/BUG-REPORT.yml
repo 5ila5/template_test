@@ -60,6 +60,8 @@ body:
           required: false
         - label: Tested my attributes on the service provider website (if possible)
           required: false
+        - label: Checked, that the source is present (custom_components/waste_collection_schedule/waste_collection_schedule/source/`name argument`) (if not try the master version)
+          required: false
   - type: checkboxes
     id: checklist-sensor
     attributes:
